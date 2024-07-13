@@ -49,7 +49,22 @@ export const images = {
     hit5: new ImageSource('/Sprites/Spells/Fire/Fireball/Sprites/Hit/FirebalHit5.png'),
     hit6: new ImageSource('/Sprites/Spells/Fire/Fireball/Sprites/Hit/FirebalHit6.png'),
     hit7: new ImageSource('/Sprites/Spells/Fire/Fireball/Sprites/Hit/FirebalHit7.png'),
-    goblin: new ImageSource('/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png'),
+    goblin1: new ImageSource('/FighterGoblin/Idle/Idle1.png'),
+    goblin2: new ImageSource('/FighterGoblin/Idle/Idle2.png'),
+    goblin3: new ImageSource('/FighterGoblin/Idle/Idle3.png'),
+    goblin4: new ImageSource('/FighterGoblin/Idle/Idle4.png'),
+    goblin5: new ImageSource('/FighterGoblin/Idle/Idle5.png'),
+    goblin6: new ImageSource('/FighterGoblin/Idle/Idle6.png'),
+    goblin7: new ImageSource('/FighterGoblin/Idle/Idle7.png'),
+
+    goblinRunnung1: new ImageSource('/FighterGoblin/Run/Running/Running1.png'),
+    goblinRunnung2: new ImageSource('/FighterGoblin/Run/Running/Running2.png'),
+    goblinRunnung3: new ImageSource('/FighterGoblin/Run/Running/Running3.png'),
+    goblinRunnung4: new ImageSource('/FighterGoblin/Run/Running/Running4.png'),
+    goblinRunnung5: new ImageSource('/FighterGoblin/Run/Running/Running5.png'),
+    goblinRunnung6: new ImageSource('/FighterGoblin/Run/Running/Running6.png'),
+    goblinRunnung7: new ImageSource('/FighterGoblin/Run/Running/Running7.png'),
+    goblinRunnung8: new ImageSource('/FighterGoblin/Run/Running/Running8.png'),
 }
 
 const allResource = {...tiles,...images}

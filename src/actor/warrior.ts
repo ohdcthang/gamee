@@ -40,7 +40,6 @@ export class Warrior extends Actor{
             spriteHeight: 64,
             },
         })
-        console.log("🚀 ~ Warrior ~ onInitialize ~ player1SpriteSheet:", player1SpriteSheet)
 
         const idle1 = Animation.fromSpriteSheet(player1SpriteSheet, [0], 200);
         this.graphics.add('idle1', idle1);
@@ -512,7 +511,7 @@ export class Warrior extends Actor{
         // }
 
         if(keyboards.wasPressed(keys.W)){
-            this.vel.y = -200
+            this.vel.y = -300
         }
 
         if(keyboards.wasReleased(keys.W)){
@@ -520,7 +519,7 @@ export class Warrior extends Actor{
         }
 
         if(keyboards.wasPressed(keys.S)){
-            this.vel.y = 200
+            this.vel.y = 300
         }
 
         if(keyboards.wasReleased(keys.S)){
