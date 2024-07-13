@@ -211,14 +211,14 @@ export class Balls extends Actor{
 
     onPreUpdate(_engine: Engine, _delta: number): void {
         if(this.dir === 'LEFT'){
-            this.vel.x -= 200
+            this.vel.x -= 500
             this.graphics.use('ballIdeLeft')
         }else if(this.dir === 'RIGHT'){
             this.graphics.use('ballIde')
 
-            this.vel.x += 200
+            this.vel.x += 500
         }else if(this.dir === 'INIT'){
-            this.vel.x += 200
+            this.vel.x += 500
         }
 
         if(this.isOffScreen){

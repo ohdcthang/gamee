@@ -19,7 +19,7 @@ export class Warrior extends Actor{
             y,
             width: 100,
             height: 100,
-            scale: new Vector(2,2),
+            scale: new Vector(1.5,1.5),
             collisionType: CollisionType.Active,
             color: Color.Green
         })
@@ -528,7 +528,7 @@ export class Warrior extends Actor{
 
       
 
-        if(keyboards.wasPressed(keys.Space)){
+        // if(keyboards.wasPressed(keys.Space)){
             let x = this.pos.x - 30
 
             if( this.spriteDirection !== 'LEFT'){
@@ -537,7 +537,7 @@ export class Warrior extends Actor{
 
             const ball = new Balls(x, this.pos.y -20, this.spriteDirection || 'INIT')
             engine.add(ball)
-        }
+        // }
 
         const keyDirection =[
             {

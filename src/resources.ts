@@ -65,6 +65,19 @@ export const images = {
     goblinRunnung6: new ImageSource('/FighterGoblin/Run/Running/Running6.png'),
     goblinRunnung7: new ImageSource('/FighterGoblin/Run/Running/Running7.png'),
     goblinRunnung8: new ImageSource('/FighterGoblin/Run/Running/Running8.png'),
+
+    goblinDeath1: new ImageSource('/FighterGoblin/Death/Death10.png'),
+    goblinDeath2: new ImageSource('/FighterGoblin/Death/Death11.png'),
+    goblinDeath3: new ImageSource('/FighterGoblin/Death/Death12.png'),
+    goblinDeath4: new ImageSource('/FighterGoblin/Death/Death13.png'),
+    goblinDeath5: new ImageSource('/FighterGoblin/Death/Death14.png'),
+    goblinDeath6: new ImageSource('/FighterGoblin/Death/Death15.png'),
+    goblinDeath7: new ImageSource('/FighterGoblin/Death/Death16.png'),
+    goblinDeath8: new ImageSource('/FighterGoblin/Death/Death17.png'),
+    goblinDeath9: new ImageSource('/FighterGoblin/Death/Death18.png'),
+    goblinDeath10: new ImageSource('/FighterGoblin/Death/Death19.png'),
+    goblinDeath11: new ImageSource('/FighterGoblin/Death/Death20.png'),
+
 }
 
 const allResource = {...tiles,...images}
