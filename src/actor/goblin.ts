@@ -368,13 +368,13 @@ export class Goblin extends Actor{
 
         const mainIdle = new Animation({
             frames: [
-                {graphic: this.graphics.getGraphic('idle1'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle2'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle3'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle4'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle5'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle6'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle7'), duration: 200},
+                {graphic: this.graphics.getGraphic('idle1'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle2'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle3'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle4'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle5'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle6'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle7'), duration: 50},
               ]
         })
         
@@ -383,14 +383,14 @@ export class Goblin extends Actor{
 
         const runningIdle = new Animation({
             frames: [
-                {graphic: this.graphics.getGraphic('idleRunning1'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning2'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning3'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning4'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning5'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning6'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning7'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning8'), duration: 200},
+                {graphic: this.graphics.getGraphic('idleRunning1'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning2'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning3'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning4'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning5'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning6'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning7'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning8'), duration: 50},
               ]
         })
 
@@ -398,13 +398,13 @@ export class Goblin extends Actor{
 
         const mainIdleLeft = new Animation({
             frames: [
-                {graphic: this.graphics.getGraphic('idle1'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle2'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle3'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle4'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle5'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle6'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle7'), duration: 200},
+                {graphic: this.graphics.getGraphic('idle1'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle2'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle3'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle4'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle5'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle6'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle7'), duration: 50},
               ]
         })
 
@@ -413,14 +413,14 @@ export class Goblin extends Actor{
 
         const runningIdleLeft = new Animation({
             frames: [
-                {graphic: this.graphics.getGraphic('idleRunning1'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning2'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning3'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning4'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning5'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning6'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning7'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleRunning8'), duration: 200},
+                {graphic: this.graphics.getGraphic('idleRunning1'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning2'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning3'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning4'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning5'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning6'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning7'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleRunning8'), duration: 50},
               ]
         })
         runningIdleLeft.flipHorizontal = true
@@ -429,16 +429,16 @@ export class Goblin extends Actor{
         
         const deathIdle = new Animation({
             frames: [
-                {graphic: this.graphics.getGraphic('idleDeath1'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath2'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath3'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath4'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath5'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath6'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath7'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath8'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath9'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath10'), duration: 200},
+                {graphic: this.graphics.getGraphic('idleDeath1'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath2'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath3'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath4'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath5'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath6'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath7'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath8'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath9'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath10'), duration: 50},
               ]
         })
         
@@ -446,16 +446,16 @@ export class Goblin extends Actor{
 
         const deathIdleLeft = new Animation({
             frames: [
-                {graphic: this.graphics.getGraphic('idleDeath1'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath2'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath3'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath4'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath5'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath6'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath7'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath8'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath9'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleDeath10'), duration: 200},
+                {graphic: this.graphics.getGraphic('idleDeath1'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath2'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath3'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath4'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath5'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath6'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath7'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath8'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath9'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleDeath10'), duration: 50},
               ]
         })
 
@@ -477,7 +477,6 @@ export class Goblin extends Actor{
             const ad = warrior?.pos.sub(this.pos)
     
             this.vel = ad?.normalize().scale(vec(150, 150))
-            console.log("🚀 ~ Goblin ~ onPreUpdate ~ this.vel:", this.vel)
 
             if(this.vel.x < 0) {
                 this.graphics.use('runningIdleLeft')
@@ -495,6 +494,20 @@ export class Goblin extends Actor{
         if(other.owner.hasTag('ball')){
            this.hp -= 1
         }
+
+        if(other.owner.hasTag('warriorComboAtk')){
+            this.hp -= 50
+         }
+         if(other.owner.hasTag('warriorComboDive')){
+            this.hp -= 50
+         }
+         if(other.owner.hasTag('susano')){
+            this.hp -= 50
+         }
+
+         if(other.owner.hasTag('susanogrand')){
+            this.hp -= 50
+         }
     }
 
     onCollisionEnd(self: Collider, other: Collider, side: Side, lastContact: CollisionContact): void {

@@ -1,7 +1,10 @@
-import { Actor, Animation, CollisionType, Color, Engine, Input, Side, SpriteSheet, Vector } from "excalibur";
+import { Actor, Animation, CollisionType, Color, Engine, Input, Side, SpriteSheet, vec, Vector } from "excalibur";
 import { DirectionQueue } from "../classes";
 import { images } from "../resources";
 import { Balls } from "./ball";
+import { Susano } from "./Susano";
+import { SusanoGrand } from "./SusanoGrand";
+import { WarriorComboaTk } from "./warriorComboAtk";
 
 export class Warrior extends Actor{
     spriteDirection: string | undefined
@@ -12,6 +15,8 @@ export class Warrior extends Actor{
     idleLeft: Animation | undefined
     idleJump: Animation | undefined
 
+
+    isCombo: boolean = false
 
     constructor(x: number, y: number){
         super({
@@ -323,14 +328,14 @@ export class Warrior extends Actor{
 
         const moveRightIdle = new Animation({
             frames: [
-                {graphic: this.graphics.getGraphic('idleMove1'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove2'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove3'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove4'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove5'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove6'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove7'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove8'), duration: 200},
+                {graphic: this.graphics.getGraphic('idleMove1'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove2'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove3'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove4'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove5'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove6'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove7'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove8'), duration: 50},
               ]
         })
 
@@ -338,14 +343,14 @@ export class Warrior extends Actor{
 
         const moveLefttIdle = new Animation({
             frames: [
-                {graphic: this.graphics.getGraphic('idleMove1Left'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove2Left'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove3Left'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove4Left'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove5Left'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove6Left'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove7Left'), duration: 200},
-                {graphic: this.graphics.getGraphic('idleMove8Left'), duration: 200},
+                {graphic: this.graphics.getGraphic('idleMove1Left'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove2Left'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove3Left'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove4Left'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove5Left'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove6Left'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove7Left'), duration: 50},
+                {graphic: this.graphics.getGraphic('idleMove8Left'), duration: 50},
               ]
         })
 
@@ -353,15 +358,15 @@ export class Warrior extends Actor{
 
         const rightIdle = new Animation({
             frames: [
-                {graphic: this.graphics.getGraphic('idle1'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle2'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle3'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle4'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle5'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle6'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle7'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle8'), duration: 200},
-                {graphic: this.graphics.getGraphic('idle9'), duration: 200},
+                {graphic: this.graphics.getGraphic('idle1'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle2'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle3'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle4'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle5'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle6'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle7'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle8'), duration: 50},
+                {graphic: this.graphics.getGraphic('idle9'), duration: 50},
               ]
         })
 
@@ -371,15 +376,15 @@ export class Warrior extends Actor{
 
         const leftIdle = new Animation({
             frames: [
-              {graphic: this.graphics.getGraphic('idle1Left'), duration: 200},
-              {graphic: this.graphics.getGraphic('idle2Left'), duration: 200},
-              {graphic: this.graphics.getGraphic('idle3Left'), duration: 200},
-              {graphic: this.graphics.getGraphic('idle4Left'), duration: 200},
-              {graphic: this.graphics.getGraphic('idle5Left'), duration: 200},
-              {graphic: this.graphics.getGraphic('idle6Left'), duration: 200},
-              {graphic: this.graphics.getGraphic('idle7Left'), duration: 200},
-              {graphic: this.graphics.getGraphic('idle8Left'), duration: 200},
-              {graphic: this.graphics.getGraphic('idle9Left'), duration: 200},
+              {graphic: this.graphics.getGraphic('idle1Left'), duration: 50},
+              {graphic: this.graphics.getGraphic('idle2Left'), duration: 50},
+              {graphic: this.graphics.getGraphic('idle3Left'), duration: 50},
+              {graphic: this.graphics.getGraphic('idle4Left'), duration: 50},
+              {graphic: this.graphics.getGraphic('idle5Left'), duration: 50},
+              {graphic: this.graphics.getGraphic('idle6Left'), duration: 50},
+              {graphic: this.graphics.getGraphic('idle7Left'), duration: 50},
+              {graphic: this.graphics.getGraphic('idle8Left'), duration: 50},
+              {graphic: this.graphics.getGraphic('idle9Left'), duration: 50},
              
             ]
         })
@@ -465,9 +470,9 @@ export class Warrior extends Actor{
 
         const jump = new Animation({
             frames: [
-              {graphic: playerJump1SpriteSheet.getSprite(0, 0) as ex.Sprite, duration: 200},
-              {graphic: playerJump2SpriteSheet.getSprite(0, 0) as ex.Sprite, duration: 200},
-              {graphic: playerJump3SpriteSheet.getSprite(0, 0) as ex.Sprite, duration: 200},
+              {graphic: playerJump1SpriteSheet.getSprite(0, 0) as ex.Sprite, duration: 50},
+              {graphic: playerJump2SpriteSheet.getSprite(0, 0) as ex.Sprite, duration: 50},
+              {graphic: playerJump3SpriteSheet.getSprite(0, 0) as ex.Sprite, duration: 50},
             ]
         })
 
@@ -475,18 +480,347 @@ export class Warrior extends Actor{
 
         const jumpLeft = new Animation({
             frames: [
-                {graphic: this.graphics.getGraphic('jump1Left'), duration: 200},
-                {graphic: this.graphics.getGraphic('jump2Left'), duration: 200},
-                {graphic: this.graphics.getGraphic('jump3Left'), duration: 200},
+                {graphic: this.graphics.getGraphic('jump1Left'), duration: 50},
+                {graphic: this.graphics.getGraphic('jump2Left'), duration: 50},
+                {graphic: this.graphics.getGraphic('jump3Left'), duration: 50},
             ]
         })
 
         this.graphics.add('jumpLeft', jumpLeft)
+
+        const combo1SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive1,
+            grid: {
+            columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo1 = Animation.fromSpriteSheet(combo1SpriteSheet, [0], 200);
+        this.graphics.add('combo1', combo1);
+
+        const combo2SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive2,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo2 = Animation.fromSpriteSheet(combo2SpriteSheet, [0], 200);
+        this.graphics.add('combo2', combo2);
+
+        const combo3SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive3,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo3 = Animation.fromSpriteSheet(combo3SpriteSheet, [0], 200);
+        this.graphics.add('combo3', combo3);
+
+        const combo4SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive4,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo4 = Animation.fromSpriteSheet(combo4SpriteSheet, [0], 200);
+        this.graphics.add('combo4', combo4);
+
+        const combo5SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive5,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo5 = Animation.fromSpriteSheet(combo5SpriteSheet, [0], 200);
+        this.graphics.add('combo5', combo5);
+
+        const combo6SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive6,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo6 = Animation.fromSpriteSheet(combo6SpriteSheet, [0], 200);
+        this.graphics.add('combo6', combo6);
+
+        const combo7SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive7,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo7 = Animation.fromSpriteSheet(combo7SpriteSheet, [0], 200);
+        this.graphics.add('combo7', combo7);
+
+        const combo8SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive8,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo8 = Animation.fromSpriteSheet(combo8SpriteSheet, [0], 200);
+        this.graphics.add('combo8', combo8);
+
+        const combo9SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive9,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo9 = Animation.fromSpriteSheet(combo9SpriteSheet, [0], 200);
+        this.graphics.add('combo9', combo9);
+
+        const combo10SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive10,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo10 = Animation.fromSpriteSheet(combo10SpriteSheet, [0], 200);
+        this.graphics.add('combo10', combo10);
+
+        const combo11SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive11,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo11 = Animation.fromSpriteSheet(combo11SpriteSheet, [0], 200);
+        this.graphics.add('combo11', combo11);
+
+        const combo12SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive12,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo12 = Animation.fromSpriteSheet(combo12SpriteSheet, [0], 200);
+        this.graphics.add('combo12', combo12);
+
+        const combo13SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive13,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo13 = Animation.fromSpriteSheet(combo13SpriteSheet, [0], 200);
+        this.graphics.add('combo13', combo13);
+
+        const combo14SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive14,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo14 = Animation.fromSpriteSheet(combo14SpriteSheet, [0], 200);
+        this.graphics.add('combo14', combo14);
+
+        const combo15SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive15,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo15 = Animation.fromSpriteSheet(combo15SpriteSheet, [0], 200);
+        this.graphics.add('combo15', combo15);
+
+        const combo16SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive16,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo16 = Animation.fromSpriteSheet(combo16SpriteSheet, [0], 200);
+        this.graphics.add('combo16', combo16);
+
+        const combo17SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive17,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo17 = Animation.fromSpriteSheet(combo17SpriteSheet, [0], 200);
+        this.graphics.add('combo17', combo17);
+
+        const combo18SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive18,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            }
+        })
+
+        const combo18 = Animation.fromSpriteSheet(combo18SpriteSheet, [0], 200);
+        this.graphics.add('combo18', combo18);
+
+        const combo19SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive19,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo19 = Animation.fromSpriteSheet(combo19SpriteSheet, [0], 200);
+        this.graphics.add('combo19', combo19);
+
+        const combo20SpriteSheet = SpriteSheet.fromImageSource({
+            image: images.comboDive20,
+            grid: {
+             columns: 2,
+            rows: 4,
+            spriteWidth: 256,
+            spriteHeight: 256,
+            },
+        })
+
+        const combo20 = Animation.fromSpriteSheet(combo20SpriteSheet, [0], 200);
+        this.graphics.add('combo20', combo20);
+
+
+        const comboIdle = new Animation({
+            frames: [
+                {graphic: this.graphics.getGraphic('combo1'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo2'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo3'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo4'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo5'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo6'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo7'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo8'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo9'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo10'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo11'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo12'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo13'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo14'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo15'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo16'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo17'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo18'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo19'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo20'), duration: 50},
+               
+              ]
+        })
+
+        this.graphics.add('comboIdle', comboIdle)
+
+        comboIdle.events.on('loop', a => {
+            this.isCombo = false
+        })
+
+        const comboIdleLeft = new Animation({
+            frames: [
+                {graphic: this.graphics.getGraphic('combo1'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo2'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo3'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo4'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo5'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo6'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo7'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo8'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo9'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo10'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo11'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo12'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo13'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo14'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo15'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo16'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo17'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo18'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo19'), duration: 50},
+                {graphic: this.graphics.getGraphic('combo20'), duration: 50},
+              ]
+        })
+
+        comboIdleLeft.flipHorizontal = true
+        this.graphics.add('comboIdleLeft', comboIdleLeft)
+
+        comboIdleLeft.events.on('loop', a => {
+            this.isCombo = false
+        })
+
+
     }   
 
     onPreUpdate(engine: Engine, delta: number): void {
-        this.onPreUpdatePhysics(engine, delta)
-        this.onPreUpdateAnimation()
+        if(this.z > 0){
+            this.onPreUpdatePhysics(engine, delta)
+            this.onPreUpdateAnimation()
+        }
     }
 
     onPreUpdatePhysics(engine: Engine, delta: number){
@@ -528,7 +862,7 @@ export class Warrior extends Actor{
 
       
 
-        // if(keyboards.wasPressed(keys.Space)){
+        if(keyboards.isHeld(keys.Space)){
             let x = this.pos.x - 30
 
             if( this.spriteDirection !== 'LEFT'){
@@ -537,7 +871,53 @@ export class Warrior extends Actor{
 
             const ball = new Balls(x, this.pos.y -20, this.spriteDirection || 'INIT')
             engine.add(ball)
+        }
+
+        if(keyboards.wasPressed(keys.B)){
+            this.z = -100
+            if(this.spriteDirection === 'LEFT'){
+                const comboAtk = new WarriorComboaTk(this.pos.x - 120, this.pos.y -10,  this.spriteDirection || 'INIT')
+                engine.add(comboAtk)
+            }else{
+                const comboAtk = new WarriorComboaTk(this.pos.x + 120, this.pos.y -10,  this.spriteDirection || 'INIT')
+                engine.add(comboAtk)
+            }
+        }
+
+        // if(keyboards.wasPressed(keys.R)){
+        //     this.z = -100
+        //     if(this.spriteDirection === 'LEFT'){
+        //         const comboAtk = new WarriorComboaDive(this.pos.x - 100, this.pos.y +110,  this.spriteDirection || 'INIT')
+        //         engine.add(comboAtk)
+        //     }else{
+        //         const comboAtk = new WarriorComboaDive(this.pos.x + 100, this.pos.y +110,  this.spriteDirection || 'INIT')
+        //         engine.add(comboAtk)
+        //     }
         // }
+
+        if(keyboards.wasPressed(keys.M)){
+            // this.z = -100
+            if(this.spriteDirection === 'LEFT'){
+                const comboAtk = new Susano(this.pos.x - 100, this.pos.y,  this.spriteDirection || 'INIT')
+                engine.add(comboAtk)
+            }else{
+                const comboAtk = new Susano(this.pos.x + 100, this.pos.y,  this.spriteDirection || 'INIT')
+                engine.add(comboAtk)
+            }
+        }
+
+        if(keyboards.wasPressed(keys.R)){
+            // this.z = -100
+            if(this.spriteDirection === 'LEFT'){
+                this.isCombo = true
+                const comboAtk = new SusanoGrand(this.pos.x, this.pos.y,  this.spriteDirection || 'INIT', new Vector(5, 5))
+                engine.add(comboAtk)
+            }else{
+                this.isCombo = true
+                const comboAtk = new SusanoGrand(this.pos.x , this.pos.y,  this.spriteDirection || 'INIT', new Vector(5, 5))
+                engine.add(comboAtk)
+            }
+        }
 
         const keyDirection =[
             {
@@ -587,11 +967,18 @@ export class Warrior extends Actor{
         //     return;
         // }
 
+        if(this.isCombo){
+            this.graphics.use(this.graphics.getGraphic(direction ?  "comboIdle" : "comboIdleLeft")!);
+
+
+            return
+        }
+
 
         if (this.vel.x !== 0) {
             this.graphics.use(this.graphics.getGraphic(direction ?  "moveRightIdle" : "moveLefttIdle")!);
             return;
-          }
+        }
 
         this.graphics.use(direction ? 'rightIdle' : 'leftIdle')
     }
