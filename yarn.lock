@@ -255,10 +255,10 @@ compare-versions@6.1.0:
   resolved "https://registry.npmjs.org/compare-versions/-/compare-versions-6.1.0.tgz#3f2131e3ae93577df111dba133e6db876ffe127a"
   integrity sha512-LNZQXhqUvqUTotpZ00qLSaify3b4VFD588aRr8MKFw4CMUr98ytzCW5wDH5qx/DEY5kCDXcbcRuCqL0szEf2tg==
 
-core-js@3.23.3:
-  version "3.23.3"
-  resolved "https://registry.npmjs.org/core-js/-/core-js-3.23.3.tgz#3b977612b15da6da0c9cc4aec487e8d24f371112"
-  integrity sha512-oAKwkj9xcWNBAvGbT//WiCdOMpb9XQG92/Fe3ABFM/R16BsHgePG00mFOgKf7IsCtfj8tA1kHtf/VwErhriz5Q==
+core-js@3.35.1:
+  version "3.35.1"
+  resolved "https://registry.npmjs.org/core-js/-/core-js-3.35.1.tgz#9c28f8b7ccee482796f8590cc8d15739eaaf980c"
+  integrity sha512-IgdsbxNyMskrTFxa9lWHyMwAJU5gXOPP+1yO+K59d50VLVAIDAbs7gIv705KzALModfK3ZrSZTPNpC0PQgIZuw==
 
 css-tree@^2.3.1:
   version "2.3.1"
@@ -334,12 +334,12 @@ esbuild@^0.21.3:
     "@esbuild/win32-ia32" "0.21.5"
     "@esbuild/win32-x64" "0.21.5"
 
-excalibur@0.27.0:
-  version "0.27.0"
-  resolved "https://registry.npmjs.org/excalibur/-/excalibur-0.27.0.tgz#6e98d9d52393f96342b15a82d66246e154dcd21d"
-  integrity sha512-stbjNb3HD0ZEG3KKt1D8x558l4JNKFux1B5KlLoe+9SqxWTod/pYJqR/Nn6teB1vtCDnU3oYCnLo4FNQk6eJFA==
+excalibur@0.29.0:
+  version "0.29.0"
+  resolved "https://registry.npmjs.org/excalibur/-/excalibur-0.29.0.tgz#f68d164a69b4b703caa80c2592c172f4fc5c5490"
+  integrity sha512-zm6OJnpTUQMuLIValLy7oobnchNZdSFjlIokYiVHtTs2xk/8olHQrvIXzZ1EjMNDp2usMwSRRg8N00ijwXJpJA==
   dependencies:
-    core-js "3.23.3"
+    core-js "3.35.1"
 
 fast-xml-parser@3.21.1:
   version "3.21.1"

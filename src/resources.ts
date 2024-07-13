@@ -4,12 +4,12 @@ import { Warrior } from "./actor"
 
 export const tiles = {
     main: new TiledResource('/map.tmx',{
+        useTilemapCameraStrategy: true, 
         entityClassNameFactories: {
             warrior: props => {
-              console.log("🚀 ~ props:", props)
               const warrior = new Warrior(props.worldPos.x,props.worldPos.y)
-              console.log("🚀 ~ player1111:", warrior)
                 warrior.z = 100
+
               return warrior
             }
           }

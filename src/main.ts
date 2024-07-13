@@ -6,7 +6,7 @@ const game = new Engine({
     width: 2200, 
     height: 800,
     displayMode: DisplayMode.FitScreenAndFill
-})
+}) 
 
 
 game.on("initialize", () => {
@@ -14,7 +14,6 @@ game.on("initialize", () => {
   goblin.z = 10000
   game.add(goblin)
   tiles['main'].addToScene(game.currentScene)
-
 });
 
 game.start(loader)

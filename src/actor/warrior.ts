@@ -30,7 +30,7 @@ export class Warrior extends Actor{
     
 
     onInitialize(_engine: Engine): void {
-        this.addTag('player')
+        this.addTag('warrior')
         const player1SpriteSheet = SpriteSheet.fromImageSource({
             image: images.ide1,
             grid: {

@@ -10,7 +10,8 @@ export class Balls extends Actor{
             width: 15,
             height: 15,
             collisionType: CollisionType.Passive,
-            color: Color.Green
+            color: Color.Green,
+            z: 1000000
         })
         this.dir = dir
 
@@ -58,7 +59,7 @@ export class Balls extends Actor{
         const ball4SpriteSheet = SpriteSheet.fromImageSource({
             image: images.ball4,
             grid: {
-             columns: 4,
+            columns: 4,
             rows: 4,
             spriteWidth: 96,
             spriteHeight: 96,
@@ -193,6 +194,9 @@ export class Balls extends Actor{
                 {graphic: this.graphics.getGraphic('hit7'), duration: 200},
               ]
         })
+        hitIde.events.on('loop', a => {
+            this.kill()
+        })
 
         this.graphics.add('hitIde', hitIde)
         this.graphics.use('ballIde')
@@ -207,14 +211,14 @@ export class Balls extends Actor{
 
     onPreUpdate(_engine: Engine, _delta: number): void {
         if(this.dir === 'LEFT'){
-            this.vel.x -= 25
+            this.vel.x -= 200
             this.graphics.use('ballIdeLeft')
         }else if(this.dir === 'RIGHT'){
             this.graphics.use('ballIde')
 
-            this.vel.x += 25
+            this.vel.x += 200
         }else if(this.dir === 'INIT'){
-            this.vel.x += 25
+            this.vel.x += 200
         }
 
         if(this.isOffScreen){
@@ -228,9 +232,9 @@ export class Balls extends Actor{
               this.graphics.use('hitIde')
               this.vel.x = -20
               this.dir = ''
-              setTimeout(() => {
-                  this.kill();
-            },500)
+            // //   setTimeout(() => {
+            //       this.kill();
+            // // },500)
             }
         });
     }

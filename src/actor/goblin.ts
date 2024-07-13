@@ -1,4 +1,4 @@
-import { Actor, CollisionType, Color, SpriteSheet, Animation, Engine } from "excalibur";
+import { Actor, CollisionType, Color, SpriteSheet, Animation, Engine, vec } from "excalibur";
 import { images } from "../resources";
 
 export class Goblin extends Actor{
@@ -39,5 +39,16 @@ export class Goblin extends Actor{
     onInitialize(_engine: Engine): void {
         this.addTag('goblin')
         this.graphics.use('idle1')
+    }
+
+    onPreUpdate(engine: Engine, delta: number): void {
+        const warrior = this.scene?.world.queryManager.createTagQuery(['warrior']).getEntities()[0]
+
+        if(warrior){
+            //@ts-expect-error
+            const ad = warrior?.pos.sub(this.pos)
+    
+            this.vel = ad?.normalize().scale(vec(150, 150))
+        }
     }
 }
