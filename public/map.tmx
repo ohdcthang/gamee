@@ -179,9 +179,9 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="4" name="Object Layer 1">
+ <objectgroup id="4" name="warrior" class="warrior">
   <properties>
-   <property name="camera" type="bool" value="true"/>
+   <property name="camera" type="bool" value="false"/>
    <property name="zoom" type="int" value="5"/>
   </properties>
   <object id="1" name="warrior" type="warrior" x="337.037" y="492.593">

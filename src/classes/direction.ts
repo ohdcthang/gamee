@@ -18,11 +18,7 @@ export class DirectionQueue {
     }
 
     remove(dir: string){
-        console.log("🚀 ~ DirectionQueue ~ remove ~ dir:", dir)
-        console.log("🚀 ~ DirectionQueue ~ remove ~  this.heldDirection11111:",  this.heldDirection)
-
         this.heldDirection = this.heldDirection.filter((d: string) => d !== dir);
-        console.log("🚀 ~ DirectionQueue ~ remove ~  this.heldDirection:",  this.heldDirection)
     }
 
 }

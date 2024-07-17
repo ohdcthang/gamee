@@ -862,7 +862,7 @@ export class Warrior extends Actor{
 
       
 
-        if(keyboards.isHeld(keys.Space)){
+        // if(keyboards.isHeld(keys.Space)){
             let x = this.pos.x - 30
 
             if( this.spriteDirection !== 'LEFT'){
@@ -871,7 +871,7 @@ export class Warrior extends Actor{
 
             const ball = new Balls(x, this.pos.y -20, this.spriteDirection || 'INIT')
             engine.add(ball)
-        }
+        // }
 
         if(keyboards.wasPressed(keys.B)){
             this.z = -100

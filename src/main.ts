@@ -20,6 +20,9 @@ game.on("initialize", () => {
     game.add(goblin)
   }
   tiles['main'].addToScene(game.currentScene)
+  game.currentScene.camera.strategy.lockToActor( tiles['main'].getEntitiesByClassName('warrior')[0])
 });
+
+// game.currentScene.camera.strategy.lockToActor( tiles['main'].getEntitiesByClassName('wallet'))
 
 game.start(loader)
